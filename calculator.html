@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main
+        {
+            width:50%;
+            height:630px;
+            border:5px double;
+            background-image:linear-gradient(red,orange,yellow,blue,indigo,purple);
+            padding: 15px;
+        }
+        .divscreen input
+        {
+            text-align: right;
+            padding: 5px;
+            height:300px;
+            width:96%;
+            font-size: larger;
+        }
+        .buttons input
+        {
+            height:50px;
+            width:24%;
+            border: 5px double black;
+            background-color: aquamarine;
+            font-size: larger;
+            font-weight: bold;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="divscreen">
+            <input type="text"  class="divscreen" id="i">
+        </div>
+        <div class="buttons">
+            <input type="button" value="7" id="first" onclick="showingvalueindivscreen(7)">
+            <input type="button" value="8" id="second" onclick="showingvalueindivscreen(8)">
+            <input type="button" value="9" id="third" onclick="showingvalueindivscreen(9)">
+            <input type="button" value="*" id="fourth" onclick="showingvalueindivscreen('*')">
+
+            <input type="button" value="4" id="fifth" onclick="showingvalueindivscreen(4)">
+            <input type="button" value="5" id="six" onclick="showingvalueindivscreen(5)">
+            <input type="button" value="6" id="seven" onclick="showingvalueindivscreen(6)">
+            <input type="button" value="-" id="eight" onclick="showingvalueindivscreen('-')">
+
+            <input type="button" value="3" id="nine" onclick="showingvalueindivscreen(3)">
+            <input type="button" value="2" id="ten" onclick="showingvalueindivscreen(2)">
+            <input type="button" value="1" id="eleven" onclick="showingvalueindivscreen(1)">
+            <input type="button" value="+" id="twelve" onclick="showingvalueindivscreen('+')">
+
+            <input type="button" value="switch" id="thirteen" onclick="showingvalueindivscreen()">
+            <input type="button" value="0" id="forteen" onclick="showingvalueindivscreen(0)">
+            <input type="button" value="." id="fifteen" onclick="showingvalueindivscreen('.')">
+            <input type="button" value="=" id="sixteen" onclick="equal()">
+            <input type="button" value="C" id="clear" onclick="clr()">
+        </div>
+    </div>
+    <script>
+        function showingvalueindivscreen(val)
+        {
+            document.getElementById("i").value+=val;
+        }
+        function equal()
+        {
+            var x=document.getElementById("i").value;
+            var y=eval(x);
+            document.getElementById("i").value=y;
+        }
+        function clr()
+        {
+            document.getElementById("i").value="";
+        }
+    </script>
+</body>
+</html>
